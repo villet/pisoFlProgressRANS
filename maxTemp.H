@@ -1,10 +1,10 @@
-scalar temp=0;
-label kds=0;
+scalar maxTemp = 0;
+label kds = 0;
 forAll(testi, i)
 {
-if (testi[i]> temp)
+if (testi[i] > temp)
 {
-  temp=testi[i];
+  temp = testi[i];
   kds = i;
 }
 }

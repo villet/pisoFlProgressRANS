@@ -4,7 +4,7 @@ fvScalarMatrix cEqn
  + fvm::div(phi, Cmean)
  - fvm::laplacian(turbulence->alphaEff(), Cmean)
  ==
- rho*wc
+ rho * wc
  );
 
 cEqn.solve();

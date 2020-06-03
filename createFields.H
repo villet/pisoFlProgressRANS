@@ -13,7 +13,7 @@ volScalarField p
  mesh
  );
 
-dimensionedScalar pref = dimensionedScalar("pref", dimensionSet(1,-1,-2,0,0,0,0), 1e5);
+dimensionedScalar pref = dimensionedScalar("pref", dimensionSet(1, -1, -2, 0, 0, 0, 0), 1e5);
 
 Info<< "Reading field U" << endl;
 

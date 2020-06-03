@@ -1,7 +1,7 @@
 rho = p*psi;
 
-volScalarField rUA = 1.0/UEqn.A();
-U = rUA*UEqn.H();
+volScalarField rUA = 1.0 / UEqn.A();
+U = rUA * UEqn.H();
 
 phi = fvc::interpolate(rho)*
   (
@@ -9,7 +9,7 @@ phi = fvc::interpolate(rho)*
    + fvc::ddtPhiCorr(rUA, rho, U, phi)
    );
 
-for (int nonOrth=0; nonOrth<=nNonOrthCorr; nonOrth++)
+for (int nonOrth = 0; nonOrth <= nNonOrthCorr; nonOrth++)
   {
     fvScalarMatrix pEqn
       (
@@ -34,7 +34,7 @@ p.relax();
 rho = p*psi;
 rho.relax();
 
-U -= rUA*fvc::grad(p);
+U -= rUA * fvc::grad(p);
 U.correctBoundaryConditions();
 
 bound(p, pMin);
